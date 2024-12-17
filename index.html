@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        button:hover{
+            cursor: pointer;
+            background-color: red;
+            color: yellow;
+            /* font-weight: bold; */
+        }
+    </style>
+</head>
+<body>
+
+    <label>Number</label>
+    <input type="text" id="d1" autocomplete="off">
+    <button type="button" onclick="isEven()">Even</button>
+    <button type="button" onclick="ispos()">Positive</button>
+    <label>Result</label>
+    <input type="text" id="res">
+
+    <script>
+
+        function isEven(){
+        let num=Number(document.getElementById("d1").value)
+        if (num%2===0){
+            document.getElementById("res").value="Even Number"
+        }
+        else{
+
+            document.getElementById("res").value="Odd Number"
+
+        }
+
+        }
+        function ispos(){
+            let num=Number(document.getElementById("d1").value)
+                if(num>0){
+
+                    document.getElementById("res").value="Positive Number"
+
+                }
+                else if(num<0){
+
+                    document.getElementById("res").value="Negative Number"
+
+                }
+                else {
+                    document.getElementById("res").value="Equal To Zero"
+                }
+            }
+
+        
+
+
+    </script>
+    
+</body>
+</html>
